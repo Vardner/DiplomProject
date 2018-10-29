@@ -1,0 +1,107 @@
+.Footer {
+  width: 100%;
+  height: 65px;
+  display: flex;
+  background: #242424;
+  box-shadow: 0 0 40px 5px rgba(0, 0, 0, 0.4);
+  position: relative;
+
+  & .Container {
+    display: flex;
+    align-items: center;
+  }
+
+  &-content {
+    color: #FFF;
+    font-size: 16px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+
+    @media (min-width: 320px) and (max-width: 480px) {
+      align-items: center;
+    }
+  }
+
+  &-copyright {
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
+
+    &Text {
+      position: relative;
+      text-transform: uppercase;
+      font-family: "Titillium Web Regular";
+
+      &:after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        transition: all ease 400ms;
+        width: 0;
+        height: 0;
+        border-bottom: 2px solid #3DD28D;
+      }
+    }
+
+    &:hover &Text:after {
+      width: 100%;
+    }
+
+    &Symbol {
+      font-family: Arial;
+    }
+
+    @media (min-width: 320px) and (max-width: 480px) {
+      flex-grow: 0;
+      margin: 0 auto;
+    }
+  }
+
+  &-moveTop {
+    color: #FFF;
+    font-size: 16px;
+    text-decoration: none;
+    min-width: 71px;
+    text-align: center;
+
+    &Symbol {
+      width: 100%;
+      display: block;
+      text-align: center;
+      transform: rotate(-90deg);
+      transition: all ease 400ms;
+    }
+
+    &Text {
+      letter-spacing: normal;
+      transition: all ease 400ms;
+    }
+
+    &:hover &Text {
+      letter-spacing: 2px;
+      font-size: 18px;
+    }
+
+    &:hover &Symbol {
+      color: #3DD28D;
+    }
+
+    @media (min-width: 320px) and (max-width: 480px) {
+      display: none;
+    }
+  }
+
+  &-phone {
+    flex-grow: 2;
+    text-align: right;
+
+    @media (min-width: 320px) and (max-width: 480px) {
+      display: none;
+    }
+  }
+}
+

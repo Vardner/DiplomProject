@@ -1,0 +1,125 @@
+.Products {
+  position: relative;
+  padding-top: 30px;
+  padding-bottom: 40px;
+
+  &-list{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: stretch;
+  }
+
+  &-item {
+    width: 310px;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    padding-right: 25px;
+
+    &:nth-child(3n) {
+      padding-right: 0;
+    }
+  }
+
+  &-image {
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    vertical-align: text-bottom;
+
+    &Link{
+      display: block;
+      text-decoration: none;
+    }
+
+    &Container {
+      width: 100%;
+      position: relative;
+      padding-bottom: 10px;
+    }
+  }
+
+  &-info {
+    box-sizing: border-box;
+    text-align: left;
+  }
+
+  &-title {
+    font-family: "EB Garamond";
+    font-size: 19px;
+    display: inline-block;
+    max-width: ~ "calc(100% - 25px)";
+
+    &Link {
+      text-decoration: none;
+      line-height: 24px;
+      color: #383636;
+      transition: color 300ms ease;
+
+      &:hover{
+        color: #57C5A0;
+      }
+    }
+  }
+
+  &-favorite {
+    display: inline-block;
+    position: relative;
+    font-size: 18px;
+    float: right;
+    margin-right: 10px;
+
+    &:hover &Icon {
+      color: #F94666;
+    }
+
+    &:active &Icon{
+      font-weight: 900;
+      color: #F94666;
+    }
+
+    &Link {
+      color: #383636;
+    }
+
+    &Icon {
+      vertical-align: text-bottom;
+      color: #383636;
+      font-weight: 400;
+      transition: all 200ms ease-in;
+    }
+
+    &Tooltip {
+      visibility: hidden;
+      opacity: 0;
+      border-radius: 3px;
+      position: absolute;
+      top: -40px;
+      right: 0;
+      white-space: nowrap;
+      padding: 0 15px;
+      font-size: 13px;
+      font-family: Roboto;
+      color: #FFF;
+      line-height: 32px;
+      background: rgba(0, 0, 0, 0.8);
+      transition: all 400ms ease;
+
+      &:after {
+        content: "";
+        position: absolute;
+        bottom: -8px;
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 8px 6px 0 6px;
+        border-color: rgba(0, 0, 0, 0.8) transparent transparent transparent;
+      }
+    }
+
+    &Link:hover &Tooltip {
+      visibility: visible;
+      opacity: 1;
+    }
+  }
+}

@@ -1,0 +1,45 @@
+.ProductDetail{
+  background: #fff;
+  font-size: 16px;
+  font-family: Merriwheather-regular;
+  color: #646464;
+  padding-bottom: 30px;
+
+  & .Price{
+    padding-bottom: 20px;
+  }
+
+  &-wrap{
+    display: flex;
+    flex-flow: row wrap;
+  }
+
+  &-content{
+    padding: 0 12px;
+  }
+
+  &-delivery{
+    display: block;
+    text-decoration: none;
+    color: #50bf69;
+    transition: color 300ms ease;
+    padding-bottom: 20px;
+
+    &:hover{
+      color: #000;
+    }
+  }
+
+  &-description{
+    font-family: "EB Garamond";
+    color: #383434;
+    font-size: 18px;
+
+    & p {
+      padding-bottom: 15px;
+      display: block;
+      font-size: 17px;
+      color: #4a4040;
+    }
+  }
+}

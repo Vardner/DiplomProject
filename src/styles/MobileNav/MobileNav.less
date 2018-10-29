@@ -1,0 +1,71 @@
+.MobileNav {
+  display: block;
+  position: fixed;
+  z-index: 11;
+  width: 240px;
+  height: 100%;
+  top: 0;
+  left: -240px;
+  transition: left 700ms ease;
+
+  &.isOpen {
+    left: 0;
+  }
+
+  &-content {
+    width: 240px;
+    background-color: #151212;
+    flex-grow: 0;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    overflow: auto;
+  }
+
+  &-search {
+    float: left;
+    width: 350px;
+
+    @media (min-width: 320px) and (max-width: 480px) {
+      display: block;
+      width: 85%;
+    }
+
+  }
+
+  &-list {
+    position: relative;
+    margin: 0;
+    padding: 15px 0 0 5px;
+
+    &Item {
+      padding: 10px 12px;
+
+      &--underline {
+        border-bottom: 1px solid #778899;
+      }
+    }
+
+    &Link {
+      text-decoration: none;
+      color: #FFF;
+      text-transform: uppercase;
+      font-size: 14px;
+      font-family: Verdana;
+
+      &:active{
+        color: #3DD28D;
+      }
+
+      &--colored {
+        color: #3DD28D;
+      }
+    }
+  }
+
+  &-overlay {
+    background-color: rgba(0, 0, 0, 0.5);
+    height: 100%;
+  }
+}

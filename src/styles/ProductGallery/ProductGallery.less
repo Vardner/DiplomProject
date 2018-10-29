@@ -1,0 +1,79 @@
+.ProductGallery {
+  display: flex;
+  flex-flow: row nowrap;
+  position: relative;
+  padding: 0 10px;
+
+  &-scroll {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &Wrap {
+      padding: 0 12px 0 0;
+      box-sizing: border-box;
+    }
+
+    &Item {
+      width: 70px;
+      height: 70px;
+      margin-bottom: 10px;
+      overflow: hidden;
+      opacity: 0.4;
+      transition: opacity 300ms ease-in;
+      cursor: pointer;
+
+      &::selection {
+        background-color: transparent;
+      }
+
+      &.isActive {
+        opacity: 1;
+      }
+
+      &:hover {
+        opacity: 1;
+      }
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+
+    &Image {
+      width: 100%;
+      height: auto;
+      overflow: hidden;
+
+      &::selection {
+        background-color: transparent;
+      }
+    }
+  }
+
+  &-slider {
+    width: 100%;
+    overflow: hidden;
+
+    &List {
+      transition-duration: 0.5s;
+      transform: translateX(0px);
+      width: 1000%;
+    }
+
+    &Item {
+      display: inline-block;
+      float: left;
+    }
+
+    &Image {
+      width: 388px;
+      height: auto;
+    }
+  }
+
+
+
+
+
+}

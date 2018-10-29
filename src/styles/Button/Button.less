@@ -1,0 +1,44 @@
+.Button {
+  position: relative;
+  width: 100%;
+  background: #3DD28D;
+  font-family: "Avrile-regular";
+  font-size: 16px;
+  padding: 12px 0;
+  border-radius: 7px;
+  color: #FFF;
+
+  &--mainServices {
+    font-family: Merriwheather-regular;
+    padding: 12px 0;
+    border-radius: 7px;
+    color: #FFF;
+    font-size: 16px;
+    box-shadow: 0 0 0 0 #FFF;
+    transition: all 400ms ease;
+
+    &:hover {
+      box-shadow: 0 0 27px 1px rgba(0, 0, 0, 0.3);
+    }
+    @media (min-width: 320px) and (max-width: 480px) {
+      font-size: 20px;
+    }
+  }
+
+  &-login {
+    padding: 9px 23px;
+    font-size: 18px;
+    color: #fff;
+    background-color: #3DD28D;
+    border-radius: 5px;
+
+    &:hover, &:active{
+      background-color: darken(#3DD28D, 7%);
+    }
+
+    &--small{
+      padding: 9px 8px;
+      font-size: 17px;
+    }
+  }
+}

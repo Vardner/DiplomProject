@@ -1,0 +1,39 @@
+.HeaderNav {
+  position: relative;
+  float: right;
+  flex-shrink: 0;
+  .clearfix();
+
+  &-item {
+    display: inline-block;
+    line-height: 36px;
+
+    &:hover .HeaderNav-link {
+      transition: ease 0.3s;
+      color: #57C5A0;
+    }
+  }
+
+  &-link {
+    padding: 0 10px;
+    text-decoration: none;
+    color: #FFF;
+    font-size: 18px;
+    display: inline-block;
+  }
+
+  &-leftSeparator:before {
+    display: inline-block;
+    vertical-align: text-bottom;
+    content: "";
+    color: #FFF;
+    height: 17px;
+    border-right: 1px solid rgba(255, 255, 255, 0.5);
+  }
+}
+
+@media (min-width: 320px) and (max-width: 480px) {
+  .HeaderNav {
+    display: none
+  }
+}

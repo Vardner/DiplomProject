@@ -1,0 +1,145 @@
+.Home {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 15px 20px 0;
+  box-shadow: inset 0px 20px 54px -22px rgba(0, 0, 0, 0.15);
+  font-family: 'Noto Serif', serif;
+  background: #F5F5F5;
+
+  & .Container {
+    padding-bottom: 30px;
+    border-bottom: 1px solid #E6E6E6;
+  }
+
+  &-list {
+    display: flex;
+    flex-flow: column wrap;
+    width: 100%;
+    height: 648px;
+    flex-direction: column;
+
+    @media (min-width: 320px) and (max-width: 480px) {
+      height: auto;
+    }
+  }
+
+  &-cardContainer {
+    flex-grow: 0;
+    flex-shrink: 0;
+    position: relative;
+    display: block;
+
+    &:hover {
+      box-shadow: 0px 0px 12px 5px rgba(0, 0, 0, 0.2);
+      cursor: pointer;
+      transition: box-shadow 0.5s linear;
+    }
+
+    &:hover .Home-cardHover {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    &Small {
+      width: 228px;
+      height: 312px;
+
+      &:nth-child(1), &:nth-child(4) {
+        margin-bottom: 24px;
+      }
+
+      @media (min-width: 320px) and (max-width: 480px) {
+        margin: 0;
+      }
+    }
+
+    &Large {
+      margin-left: 22px;
+      margin-right: 22px;
+      width: 480px;
+      height: 648px;
+
+      @media (min-width: 320px) and (max-width: 480px) {
+        margin: 0;
+      }
+    }
+
+    @media (min-width: 320px) and (max-width: 480px) {
+      width: 80%;
+      height: auto;
+      margin: 0 auto 20px;
+      overflow: hidden;
+    }
+  }
+
+  &-cardItem {
+    width: 100%;
+    position: relative;
+  }
+
+  &-cardImage {
+    height: auto;
+    width: 100%;
+  }
+
+  &-cardHover {
+    visibility: hidden;
+    opacity: 0;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    transition: opacity 1000ms ease-in 500ms, visibility 1000ms ease-in 500ms;
+
+    @media (min-width: 320px) and (max-width: 480px) {
+      visibility: visible;
+      opacity: 1;
+      height: 35%;
+    }
+  }
+
+  &-cardLink {
+    text-decoration: none;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &-cardTittle {
+    text-transform: uppercase;
+    color: #FFF;
+    font-size: 34px;
+    letter-spacing: 4px;
+    font-family: 'Old Standard TT', serif;
+    position: relative;
+
+    &--small {
+      font-size: 26px;
+    }
+
+    &--big {
+      font-size: 44px;
+      letter-spacing: 6px;
+    }
+
+    &:after, &:before {
+      content: '';
+      position: absolute;
+      height: 1px;
+      width: 100%;
+      left: 0;
+      background-color: #FFF;
+    }
+
+    &:before {
+      top: 0;
+    }
+
+    &:after {
+      bottom: 0;
+    }
+  }
+}

@@ -1,0 +1,53 @@
+.MainNav {
+  font-family: 'Noto Serif', serif;
+  .clearfix();
+
+  &-wrap {
+    background-color: #FFF;
+    width: 100%;
+    padding-top: 55px;
+  }
+
+  &-item {
+    display: block;
+    float: left;
+    position: relative;
+
+    &:after {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 2px;
+      bottom: 0;
+      left: 0;
+      background-color: #57C5A0;
+      visibility: hidden;
+      transform: scaleX(0);
+      transition: all 0.3s ease-in-out 0s;
+    }
+
+    &:hover:after {
+      visibility: visible;
+      transform: scaleX(1);
+    }
+  }
+
+  &-link {
+    font-family: 'EB Garamond', serif;
+    font-size: 20px;
+    display: block;
+    text-decoration: none;
+    color: #464545;
+    padding: 17px 20px;
+
+    &:hover {
+      color: #000;
+    }
+  }
+}
+
+@media (min-width: 320px) and (max-width:480px) {
+  .MainNav{
+    display: none;
+  }
+}
